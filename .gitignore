@@ -1,10 +1,50 @@
 # Dependencies
 node_modules/
 
-# Secrets and local config
-.escrows.json
+# Secrets - NEVER commit
+.secrets/
+*.key
+*.pem
+*.p12
 *.env
 .env*
+secrets/
+credentials/
+**/api_key*
+**/apikey*
+**/*secret*
+**/*token*
+.escrows.json
 
 # OS files
 .DS_Store
+Thumbs.db
+
+# Node
+npm-debug.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Temporary
+*.tmp
+*.temp
+*.log
+.cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Sensitive backups
+*.bak
+*.backup
+
+# Local workspace files (not for repo)
+logs/
+knowledge/
