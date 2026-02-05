@@ -1,5 +1,47 @@
-# Dependencies
-node_modules/
+# ===========================================
+# PRIVATE - Never push to public repo
+# ===========================================
+
+# Personal/Internal docs
+SOUL.md
+USER.md
+MEMORY.md
+DASHBOARD.md
+AGENTS.md
+IDENTITY.md
+HEARTBEAT.md
+TOOLS.md
+BOOTSTRAP.md
+
+# Memory files
+memory/
+
+# Internal projects
+projects/ada-strategy/
+projects/openclaw-platform/
+projects/openclaw-installer/
+projects/trinity/
+projects/articles/
+projects/vhagar/
+projects/appdynamics-knowledge/
+projects/skill-forge/
+projects/skill-acquisition/
+projects/moltbook-queued-replies.md
+projects/moltbook-reply.js
+projects/THE-STORY.md
+projects/VISION-2030-3001.md
+
+# Skills (local installs)
+skills/
+
+# OpenClaw internals
+.clawhub/
+knowledge/
+logs/
+
+# ===========================================
+# STANDARD IGNORES
+# ===========================================
 
 # Secrets - NEVER commit
 .secrets/
@@ -12,13 +54,18 @@ secrets/
 credentials/
 **/api_key*
 **/apikey*
-**/*secret*
-**/*token*
-.escrows.json
+
+# Dependencies
+node_modules/
 
 # OS files
 .DS_Store
 Thumbs.db
+
+# Build artifacts
+out/
+cache/
+artifacts/
 
 # Node
 npm-debug.log
@@ -41,11 +88,5 @@ venv/
 *.swp
 *.swo
 
-# Sensitive backups
-*.bak
-*.backup
-
-# Local workspace files (not for repo)
-logs/
-knowledge/
-projects/usdc-hackathon/
+# Foundry
+broadcast/
