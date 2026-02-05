@@ -1,0 +1,16 @@
+{
+  "name": "clawpay",
+  "version": "1.0.0",
+  "description": "USDC payment skill for OpenClaw agents",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "viem": "^2.0.0"
+  },
+  "keywords": ["openclaw", "skill", "usdc", "payments", "agents"],
+  "author": "VHAGAR",
+  "license": "MIT"
+}

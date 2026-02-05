@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Secrets and local config
+.escrows.json
+*.env
+.env*
+
+# OS files
+.DS_Store
