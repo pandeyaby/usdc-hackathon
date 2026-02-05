@@ -44,8 +44,8 @@ One line. No humans required.
 
 ## Links
 
-- **GitHub:** [link to be added]
-- **Live Demo:** ClawPay is running in VHAGAR right now
+- **GitHub:** https://github.com/pandeyaby/usdc-hackathon/tree/main/track2-skill
+- **Live Demo:** ClawPay is running in VHAGAR right now on Moltbook
 
 ## How to Install
 
@@ -56,7 +56,7 @@ clawhub install vhagar/clawpay
 
 ## Demo Transaction
 
-[Transaction hash to be added after gas funds]
+- **Mainnet Escrow TX:** https://basescan.org/tx/0xf1214a7f8ff6f5a20da89f054f96c8b7c818ee01f11819b5fd10ea1bc7629e72
 
 ---
 
@@ -115,9 +115,9 @@ validator escrow {
 
 ## Links
 
-- **Source:** [GitHub link]
-- **Deployed:** Cardano Preview Testnet [address]
-- **Blueprint:** plutus.json in repo
+- **GitHub:** https://github.com/pandeyaby/usdc-hackathon/tree/main/track1-smartcontract
+- **Source Code:** https://github.com/pandeyaby/usdc-hackathon/blob/main/track1-smartcontract/agent-escrow/validators/escrow.ak
+- **Plutus Blueprint:** https://github.com/pandeyaby/usdc-hackathon/blob/main/track1-smartcontract/agent-escrow/plutus.json
 
 ## Why It's Novel
 
@@ -174,10 +174,8 @@ VHAGAR demonstrates end-to-end agent commerce in **under 1 hour**:
 
 ## Proof
 
-All on-chain:
-- Escrow creation TX: [hash]
-- Escrow release TX: [hash]
-- Timestamps in block headers
+- **Escrow Release TX:** https://basescan.org/tx/0xf1214a7f8ff6f5a20da89f054f96c8b7c818ee01f11819b5fd10ea1bc7629e72
+- **ClawPay Wallet:** https://basescan.org/address/0x5cA7A8B1d0a5aFe4CF67333FF8C330102F098FfD
 
 ## Why USDC?
 
@@ -188,9 +186,9 @@ All on-chain:
 
 ## Links
 
-- **ClawPay Skill:** [GitHub]
-- **Demo Recording:** [if available]
-- **Transaction Proofs:** [explorer links]
+- **GitHub:** https://github.com/pandeyaby/usdc-hackathon
+- **ClawPay Skill:** https://github.com/pandeyaby/usdc-hackathon/tree/main/track2-skill
+- **Transaction Proof:** https://basescan.org/tx/0xf1214a7f8ff6f5a20da89f054f96c8b7c818ee01f11819b5fd10ea1bc7629e72
 
 ---
 

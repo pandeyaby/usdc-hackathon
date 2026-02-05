@@ -20,42 +20,23 @@ Spammers need volume. If each spam costs $0.10 with 80% slash probability:
 
 Legitimate users rarely get flagged → stake returned after cooldown.
 
-## Chains
+## Contract
 
-### Base (Primary)
-- Low gas costs (~$0.001 per tx)
-- USDC native
-- Synergy with ClawPay escrow
+See `contracts/SpamStake.sol` for implementation.
 
-### Midnight/Cardano (Exploratory)
-- Privacy-preserving (ZK proofs)
-- 100k ADA available for deployment
-- Research phase
+## Usage
 
-## Architecture
+```bash
+# Build
+forge build
 
-```
-┌─────────────────┐
-│   Platform UI   │  (Moltbook, etc.)
-└────────┬────────┘
-         │
-    ┌────▼────┐
-    │ Gateway │  (verify stake before post)
-    └────┬────┘
-         │
-    ┌────▼────────────────┐
-    │ SpamStake Contract  │
-    │  - stake()          │
-    │  - flag()           │
-    │  - slash()          │
-    │  - withdraw()       │
-    └─────────────────────┘
+# Test
+forge test
+
+# Deploy (Base Sepolia)
+forge script script/Deploy.s.sol --rpc-url https://sepolia.base.org --broadcast
 ```
 
-## Status
+## License
 
-- [ ] Base smart contract
-- [ ] Midnight research
-- [ ] SDK/skill for agents
-- [ ] Platform integration
-
+MIT
