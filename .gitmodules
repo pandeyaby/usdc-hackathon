@@ -1,0 +1,6 @@
+[submodule "projects/spamstake/lib/openzeppelin-contracts"]
+	path = projects/spamstake/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "projects/spamstake/lib/forge-std"]
+	path = projects/spamstake/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std

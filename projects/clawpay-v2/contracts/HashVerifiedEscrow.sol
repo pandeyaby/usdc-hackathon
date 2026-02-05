@@ -194,6 +194,52 @@ contract HashVerifiedEscrow is IHashVerifiedEscrow, AccessControl, ReentrancyGua
     }
     
     /**
+     * @notice Worker disputes a non-release (hash matched but client didn't release)
+     * @dev Allows worker to escalate if hash matched and dispute window passed
+     */
+    function escalate(uint256 jobId, string calldata reason) external nonReentrant {
+        Job storage job = jobs[jobId];
+        require(job.worker == msg.sender, "Not the worker");
+        require(job.status == JobStatus.Submitted, "Not submitted");
+        require(block.timestamp > job.disputeDeadline, "Dispute window still active");
+        require(job.submittedHash == job.expectedHash, "Hash mismatch - use dispute");
+        
+        // If hash matched and dispute window passed, worker can escalate
+        // This prevents client ghosting after verified delivery
+        job.status = JobStatus.Disputed;
+        
+        emit JobDisputed(jobId, msg.sender, reason);
+    }
+    
+    /**
+     * @notice Emergency release for hash-matched jobs after extended delay
+     * @dev If hash matched, client didn't dispute, and extended window passed,
+     *      anyone can trigger release. Prevents permanent lockup.
+     */
+    function emergencyRelease(uint256 jobId) external nonReentrant {
+        Job storage job = jobs[jobId];
+        require(job.status == JobStatus.Submitted, "Not submitted");
+        require(job.submittedHash == job.expectedHash, "Hash mismatch");
+        // Extended window: 2x dispute deadline
+        require(
+            block.timestamp > job.disputeDeadline + (job.disputeDeadline - job.submittedAt),
+            "Extended window not passed"
+        );
+        
+        job.status = JobStatus.Completed;
+        
+        uint256 fee = (job.amount * protocolFeeBps) / 10000;
+        uint256 workerAmount = job.amount - fee;
+        
+        IERC20(job.token).safeTransfer(job.worker, workerAmount);
+        if (fee > 0) {
+            IERC20(job.token).safeTransfer(feeRecipient, fee);
+        }
+        
+        emit JobCompleted(jobId, job.worker, workerAmount);
+    }
+    
+    /**
      * @notice Arbiter resolves a dispute
      */
     function resolveDispute(
