@@ -4,3 +4,9 @@
 [submodule "projects/spamstake/lib/forge-std"]
 	path = projects/spamstake/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "projects/clawpay-v2/lib/forge-std"]
+	path = projects/clawpay-v2/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "projects/clawpay-v2/lib/openzeppelin-contracts"]
+	path = projects/clawpay-v2/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
