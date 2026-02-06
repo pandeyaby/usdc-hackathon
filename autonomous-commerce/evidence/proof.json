@@ -35,17 +35,19 @@
   "verification": {
     "proofHash": "0x876d4ddfd420463a8361e302e3fb31621836012e6358da87a911e7e667dd0239",
     "hashMethod": "SHA-256 of order confirmation screenshot",
-    "screenshotCount": 5,
+    "screenshotCount": 3,
     "realPurchase": true,
-    "note": "Full order details redacted for privacy. Screenshots available as visual proof."
+    "note": "Full order details and checkout/confirmation screenshots redacted for privacy. Cart and order history screenshots available as visual proof."
   },
   "evidence": {
     "screenshots": [
       "01-cart.jpg",
       "02-upsell.jpg",
-      "03-checkout.jpg",
-      "04-order-confirmed.jpg",
       "05-order-history.jpg"
+    ],
+    "redacted": [
+      "03-checkout.jpg (contained shipping address)",
+      "04-order-confirmed.jpg (contained shipping address)"
     ]
   }
 }

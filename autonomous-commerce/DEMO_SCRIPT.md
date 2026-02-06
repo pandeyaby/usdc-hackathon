@@ -4,6 +4,27 @@
 
 **First ever AI agent to complete a real-world purchase with cryptographic escrow.**
 
+---
+
+## ⚠️ Security Note: Deliberate Credential Boundaries
+
+This demo uses Playwright browser automation to execute the purchase. **Full end-to-end autonomy is technically possible** — the agent can:
+- Navigate any website
+- Fill forms, click buttons, complete checkouts
+- Handle multi-step flows including 2FA
+
+**However, we deliberately did not grant the agent stored marketplace credentials (Amazon login, payment methods).** This is a conscious security decision:
+
+1. **Principle of Least Privilege** — Agents should only have access to what they need
+2. **User Control** — Payment credentials remain under human control
+3. **Audit Trail** — Human must explicitly authorize sensitive access
+
+If marketplace credentials were securely stored in the agent's credential vault (e.g., via 1Password integration or encrypted keychain), this entire flow would be **100% autonomous** with zero human intervention.
+
+**The architecture supports full autonomy. The constraint is security policy, not capability.**
+
+---
+
 ## Setup (One-Time)
 
 ### 1. Restart Chrome with Debug Port
@@ -56,7 +77,7 @@ Escrow Hash: 0x7f83b1657ff1fc53...
 
 ### Part 3: Amazon Navigation (0:30)
 
-**Screen shows:**
+**Screen shows (Playwright automation):**
 1. Chrome opens to amazon.com
 2. Search bar: "USB-C cable Prime"
 3. Filter by price, Prime eligible

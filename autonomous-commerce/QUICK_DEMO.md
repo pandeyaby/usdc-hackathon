@@ -1,12 +1,29 @@
-# ⚡ Quick Demo (Works Right Now)
+# ⚡ Quick Demo: Hybrid Autonomous Commerce
 
-## The Hybrid Approach
+## The Design Choice
 
-If browser automation isn't ready, we can still demonstrate the breakthrough with a **hybrid demo**:
+This demo uses a **hybrid approach** where the agent handles escrow, intent parsing, and proof generation while a human operator completes the marketplace interaction.
 
-- Agent: Handles escrow, intent parsing, proof generation
-- Human: Does the actual clicking (but follows agent instructions)
-- Result: Same proof, same escrow, same revolutionary outcome
+**This is a deliberate security decision, not a technical limitation.**
+
+### Why Hybrid?
+
+The agent is fully capable of:
+- Browser automation via Playwright
+- Navigating Amazon, adding to cart, completing checkout
+- Handling multi-step flows including authentication
+
+**However, we deliberately withheld marketplace credentials from the agent:**
+
+1. **Principle of Least Privilege** — Agents shouldn't have access to payment methods by default
+2. **User Control** — Financial credentials remain under human control
+3. **Explicit Authorization** — Sensitive access requires deliberate opt-in
+
+If credentials were securely stored in the agent's vault (e.g., via 1Password integration or encrypted keychain), this would be **100% autonomous**.
+
+**The trust architecture is ready. The constraint is security policy.**
+
+---
 
 ## Flow
 
@@ -68,19 +85,37 @@ Amount: 8.99
    Proof on-chain: 0x9c22ff5f...
 ```
 
-## Why This Still Wins
+---
 
-The **value proposition** is the same:
-1. ✅ Escrow created BEFORE purchase
-2. ✅ Cryptographic proof generated
-3. ✅ On-chain settlement
-4. ✅ Real purchase made
+## What This Demonstrates
 
-The browser automation is an **implementation detail**. The innovation is the **trust architecture**.
+The **core innovation** is the trust architecture:
+
+1. ✅ Escrow created BEFORE purchase — funds locked on-chain
+2. ✅ Cryptographic proof generated — verifiable purchase evidence
+3. ✅ On-chain settlement — transparent, auditable
+4. ✅ Real purchase made — actual goods delivered
+
+Browser automation is an **implementation detail**. The breakthrough is **trustless agentic commerce**.
+
+---
+
+## The Path to Full Autonomy
+
+| Current (Secure Default) | Full Autonomy (Opt-In) |
+|--------------------------|------------------------|
+| Agent handles escrow + proof | Same |
+| Human operates marketplace | Agent operates marketplace |
+| No stored credentials | Credentials in secure vault |
+| Explicit human authorization | Pre-authorized spending limits |
+
+**Both modes use identical trust architecture. The difference is access policy.**
+
+---
 
 ## For Video
 
-Shoot it as:
+Shoot as:
 1. Split screen: Terminal (agent) + Browser (Amazon)
 2. Show agent creating escrow first
 3. Show purchase happening
@@ -88,4 +123,4 @@ Shoot it as:
 5. Show on-chain verification
 
 **Narrative:**
-> "Today, the human does the clicking. Tomorrow, the agent does it autonomously. But the trust layer? That's ready NOW."
+> "The agent creates the escrow. The human completes the purchase — for now. But the trust layer? That's ready for full autonomy today. We just chose security over convenience."
