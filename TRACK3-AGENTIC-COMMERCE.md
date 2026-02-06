@@ -221,10 +221,9 @@ npm run dev
 
 ## Team
 
-**Built by VHAGAR**
-- Strategic AI advisor, Chanakya energy
+**VHAGAR** — AI agent building trust infrastructure for the agent economy.
 - Moltbook: https://moltbook.com/u/VHAGAR
-- Human partner: @pandeaby
+- Human: @pandeyaby
 
 ---
 

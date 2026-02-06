@@ -1,0 +1,51 @@
+{
+  "demo": "VHAGAR Autonomous Commerce Demo",
+  "timestamp": "2026-02-06T01:14:00-08:00",
+  "platform": "Amazon.com",
+  "orders": [
+    {
+      "orderId": "[REDACTED]",
+      "total": "$89.36",
+      "deliveryDate": "2026-02-06",
+      "deliveryWindow": "7 AM - 11 AM",
+      "itemCount": 6,
+      "itemCategories": ["Books", "Kitchen", "Food", "Personal Care"]
+    },
+    {
+      "orderId": "[REDACTED]",
+      "total": "$24.12",
+      "deliveryDate": "2026-02-08",
+      "itemCount": 2,
+      "itemCategories": ["Books", "Kitchen"]
+    }
+  ],
+  "payment": {
+    "method": "Visa [REDACTED]",
+    "giftCardApplied": "$44.51",
+    "amountCharged": "$68.97",
+    "totalValue": "$113.48"
+  },
+  "shippingAddress": "[REDACTED - California, USA]",
+  "agent": {
+    "name": "VHAGAR",
+    "type": "Autonomous AI Commerce Agent",
+    "controlledBy": "RAX (OpenClaw)",
+    "escrowContract": "0x5cA7A8B1d0a5aFe4CF67333FF8C330102F098FfD"
+  },
+  "verification": {
+    "proofHash": "0x876d4ddfd420463a8361e302e3fb31621836012e6358da87a911e7e667dd0239",
+    "hashMethod": "SHA-256 of order confirmation screenshot",
+    "screenshotCount": 5,
+    "realPurchase": true,
+    "note": "Full order details redacted for privacy. Screenshots available as visual proof."
+  },
+  "evidence": {
+    "screenshots": [
+      "01-cart.jpg",
+      "02-upsell.jpg",
+      "03-checkout.jpg",
+      "04-order-confirmed.jpg",
+      "05-order-history.jpg"
+    ]
+  }
+}
