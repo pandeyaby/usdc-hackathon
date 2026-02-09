@@ -37,7 +37,9 @@
     "hashMethod": "SHA-256 of order confirmation screenshot",
     "screenshotCount": 5,
     "realPurchase": true,
-    "note": "Personal information (name, address, card number) redacted from screenshots for privacy."
+    "note": "Personal information (name, address, card number) redacted from screenshots for privacy.",
+    "deliveryConfirmed": true,
+    "deliveryConfirmedDate": "2026-02-09"
   },
   "evidence": {
     "screenshots": [
