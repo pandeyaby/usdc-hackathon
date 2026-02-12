@@ -1,0 +1,38 @@
+# Sensitive data
+.env
+.secrets/
+*.key
+*.pem
+auth.json
+wallet.json
+
+# Browser session data
+.chrome-session/
+user-data/
+screenshots/
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test data (keep evidence/ separate, this is for local testing)
+test-orders/
+local-evidence/
