@@ -11,11 +11,13 @@ line_length = 120
 tab_width = 4
 bracket_spacing = true
 
-# Base Sepolia testnet
+# Networks
 [rpc_endpoints]
+sepolia = "https://ethereum-sepolia-rpc.publicnode.com"
 base_sepolia = "https://sepolia.base.org"
 base_mainnet = "https://mainnet.base.org"
 
 [etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}", url = "https://api-sepolia.etherscan.io/api" }
 base_sepolia = { key = "${BASESCAN_API_KEY}", url = "https://api-sepolia.basescan.org/api" }
 base_mainnet = { key = "${BASESCAN_API_KEY}", url = "https://api.basescan.org/api" }

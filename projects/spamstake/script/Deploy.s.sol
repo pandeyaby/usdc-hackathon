@@ -5,19 +5,19 @@ import "forge-std/Script.sol";
 import "../contracts/SpamStake.sol";
 
 contract DeploySpamStake is Script {
-    // Base Sepolia USDC (test token)
-    // Note: You may need to use a mock or the actual test USDC
-    address constant USDC_BASE_SEPOLIA = 0x036CbD53842c5426634e7929541eC2318f3dCF7e;
+    // Ethereum Sepolia USDC (Circle's official test token)
+    // https://developers.circle.com/stablecoins/docs/usdc-on-test-networks
+    address constant USDC_SEPOLIA = 0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238;
     
     function run() external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         
         vm.startBroadcast(deployerPrivateKey);
         
-        SpamStake spamStake = new SpamStake(USDC_BASE_SEPOLIA);
+        SpamStake spamStake = new SpamStake(USDC_SEPOLIA);
         
         console.log("SpamStake deployed to:", address(spamStake));
-        console.log("Stake token (USDC):", USDC_BASE_SEPOLIA);
+        console.log("Stake token (USDC):", USDC_SEPOLIA);
         console.log("Min stake:", spamStake.minStake());
         console.log("Flag threshold:", spamStake.flagThreshold());
         
